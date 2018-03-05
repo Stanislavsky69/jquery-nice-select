@@ -72,9 +72,11 @@
       $options.each(function(i) {
         var $option = $(this);
         var display = $option.data('display');
+        var style   = $option.attr('style');
 
         $dropdown.find('ul').append($('<li></li>')
           .attr('data-value', $option.val())
+          .attr('style', style)
           .attr('data-display', (display || null))
           .addClass('option' +
             ($option.is(':selected') ? ' selected' : '') +
